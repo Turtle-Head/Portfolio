@@ -8,11 +8,7 @@
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-}
-*{
-    @font-family{
-
-    }
+    font-family: "Fira Sans";
 }
 
 nav a, button{
@@ -25,29 +21,29 @@ body{
 }
 
 h1{
-    font-size: 72px;
+    font-size: 96px;
     font-variant: small-caps;
     font-weight: lighter;
-    font-family: verdana, sans-serif;
+    font-family: "Fira Sans", verdana, sans-serif;
     /*align: right;
     text-align: right;*/
     padding: 0;
     border: 0;
     margin: 0;
-    color: #29b2e4;
+    color: #999;
     word-wrap: none;
 }
 
-h4{
+h2{
     font-variant: small-caps;
     font-size: 24px;
-    font-family: verdana, sans-serif;
+    font-family: "Fira Sans", verdana, sans-serif;
     /*align: right;
     text-align: right;*/
     padding:0;
     border: 0;
     margin: 0;
-    color: #29b2e4;
+    color: #999;
     word-wrap: none;
     vertical-align: middle;
 }
@@ -56,11 +52,11 @@ h3{
     font-variant: small-caps;
     font-size: 20px;
     align: center;
-    font-family: verdana, sans-serif;
+    font-family: "Fira Sans", verdana, sans-serif;
     text-align: center;
     padding: 0 0 0;
     line-height: 0.1;
-    color: #29b2e4;
+    color: #999;
     word-wrap: none;
 }
 
@@ -69,22 +65,36 @@ img{
 }
 
 /* CLASSES */
+.divider{
+    width: 100%;
+    min-height: 5px;
+    background-color: #999;
+    align-self: center;
+    font-family: "Fira Sans", verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 22px;
+}
 
-/* IDS */
+.divider-f{
+    width: 100%;
+    min-height: 5px;
+    align: relative 50;
+    text-indent: 50;
+    color: #999;
+    font-family: "Fira Sans", verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 22px;
+}
 
-#logo{
-    /*width: 29%;*/
-    height: 50px;
-    border-radius: 50px 20px;
-    border: 20px solid #29b2e4;
+
+.logo{
+    border-radius: 70px 40px;
+    border: 10px solid #999;
     padding: 15px;
-    width: 120px;
-    height: 150px;
+    width: 135px;
+    height: 130px;
 }
-#logos{
-    line-height: 2;
-    display: inline;
-}
-#banner{
+
+.banner{
     width: 100%;
 }
