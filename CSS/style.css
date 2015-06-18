@@ -3,24 +3,21 @@
 
 /* ELEMENTS */
 
-*{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
+* {
     font-family: "Fira Sans";
 }
 
-nav a, button{
+nav a,
+button {
   min-width:48;
   min-height:48;
 }
 
-body{
+body {
     background-color: #231f20;
 }
 
-h1{
+h1 {
     font-size: 96px;
     font-variant: small-caps;
     font-weight: lighter;
@@ -34,13 +31,13 @@ h1{
     word-wrap: none;
 }
 
-h2{
+h2 {
     font-variant: small-caps;
     font-size: 24px;
     font-family: "Fira Sans", verdana, sans-serif;
     /*align: right;
     text-align: right;*/
-    padding:0;
+    padding: 0;
     border: 0;
     margin: 0;
     color: #999;
@@ -48,7 +45,7 @@ h2{
     vertical-align: middle;
 }
 
-h3{
+h3 {
     font-variant: small-caps;
     font-size: 20px;
     align: center;
@@ -60,12 +57,12 @@ h3{
     word-wrap: none;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
 /* CLASSES */
-.divider{
+.divider {
     width: 100%;
     min-height: 5px;
     background-color: #999;
@@ -75,7 +72,7 @@ img{
     font-size: 22px;
 }
 
-.divider-f{
+.divider-f {
     width: 100%;
     min-height: 5px;
     align: relative 50;
@@ -87,7 +84,7 @@ img{
 }
 
 
-.logo{
+.logo {
     border-radius: 70px 40px;
     border: 10px solid #999;
     padding: 15px;
@@ -95,6 +92,6 @@ img{
     height: 130px;
 }
 
-.banner{
+.banner {
     width: 100%;
 }
