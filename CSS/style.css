@@ -95,3 +95,7 @@ img {
 .banner {
     width: 100%;
 }
+/* IDs */
+#feat-item {
+    padding: 8.33%;
+}
