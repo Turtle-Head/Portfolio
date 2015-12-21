@@ -7,63 +7,45 @@
     <head>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css">
         <link href="CSS/main.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="CSS/style.css">
         <link href="http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>James Fehr</title>
     </head>
 
     <body>
-        <div class="grid">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+      <div class="grid">
             <!-- Header -->
-            <header class="row">
-                <div class="col-j6">
-                    <h1 class="logo" align="center">jf</h1>
-                </div>
-                <div class="col-j6">
-                    <h1 align="right">
-                        james fehr
-                    </h1>
-                    <h2 align="right">
-                        front end designer
-                    </h4>
-                </div>
-            </header>
-            <!-- Central Banner -->
-            <div class="divider"></div>
-            <section class="col-j12"><img class="banner" src="bkg-random.jpg" alt="page art"></section>
-            <main class="divider-f">Featured Work
-            <!-- Featured Sites Area (Inline) -->
-            <!-- TODO:  -change images, link git repositories, add modal text/images -->
-                <section class="row" align="center">
-                    <article class="col-j4">
-                        <div class="col-j12" id="feat-item">
-                            <a href="http://turtle-head.github.io/Portfolio"><img src="img\SSPortfolioTop.jpg" alt="project 1"></a>
-                        </div>
-                        <div class="col-j12">
-                            <h3>Portfolio</h3>http://turtle-head.github.io/Portfolio
-                        </div>
-                    </article>
-                    <article class="col-j4">
-                        <div class="col-j12" id="feat-item">
-                            <a href="http://turtle-head.github.io/Resume"><img src="img\SSResumeTop.png" alt="Resume"></a>
-                        </div>
-                        <div class="col-j12">
-                            <h3>Resume</h3>http://turtle-head.github.io/Resume
-                        </div>
-                    </article>
-                    <article class="col-j4">
-                        <div class="col-j12" id="feat-item">
-                            <a href="http://turtle-head.github.io/Bugged/"><img src="img\Bugged.png" alt="Bugged: Clone of Frogger"></a>
-                        </div>
-                        <div class="col-j12">
-                            <h3>Bugged: Clone of Frogger</h3>http://turtle-head.github.io/Bugged/
-                        </div>
-                    </article>
-                </section>
-            </main>
+      <header class="row">
+        <div class="col-j6">
+          <h1 class="logo" align="center">jf</h1>
         </div>
+        <div class="col-j6">
+          <h1 align="right">james fehr</h1>
+          <h2 align="right">front end designer</h4>
+        </div>
+      </header>
+      <!-- Central Banner -->
+      <div class="divider"></div>
+        <section class="col-j12"><img class="banner" src="img\switz.jpg" alt="page art"></section>
+        <main class="divider-f">Featured Work
+        <!-- Featured Sites Area (Inline) -->
+        <!-- TODO:  -change images, link git repositories, add modal text/images -->
+          <section class="row" align="center" data-bind="foreach: projects">
+            <article class="col-j4">
+              <div class="col-j12" id="feat-item">
+                <a data-bind="attr: {'href': url}"><img data-bind="attr: {'src': pic}"></a>
+              </div>
+              <div class="col-j12">
+                <h3 data-bind="text: name"></h3><div data-bind="text: url"></div>
+              </div>
+            </article>
+          </section>
+        </main>
+        <script src="js/script.min.js"></script>
+      </div>
     </body>
 </html>
