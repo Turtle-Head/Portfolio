@@ -8,90 +8,44 @@
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css">
+        <link href="CSS/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="CSS/style.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
         <title>James Fehr</title>
     </head>
 
     <body>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
-      <script>
-        var cb = function() {
-          var l = document.createElement('link'); l.rel = 'stylesheet';
-          l.href = 'http://normalize-css.googlecode.com/svn/trunk/normalize.css';
-          var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-        };
-        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-            webkitRequestAnimationFrame || msRequestAnimationFrame;
-        if (raf) raf(cb);
-        else window.addEventListener('load', cb);
-      </script>
-      <script>
-        var cb = function() {
-          var l = document.createElement('link'); l.rel = 'stylesheet';
-          l.href = 'http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,700italic';
-          var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-        };
-        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-            webkitRequestAnimationFrame || msRequestAnimationFrame;
-        if (raf) raf(cb);
-        else window.addEventListener('load', cb);
-      </script>
-      <script>
-        var cb = function() {
-          var l = document.createElement('link'); l.rel = 'stylesheet';
-          l.href = 'css/main.min.css';
-          var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-        };
-        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-            webkitRequestAnimationFrame || msRequestAnimationFrame;
-        if (raf) raf(cb);
-        else window.addEventListener('load', cb);
-      </script>
-      <script>
-        var cb = function() {
-          var l = document.createElement('link'); l.rel = 'stylesheet';
-          l.href = 'css/style.min.css';
-          var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-        };
-        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-            webkitRequestAnimationFrame || msRequestAnimationFrame;
-        if (raf) raf(cb);
-        else window.addEventListener('load', cb);
-      </script>
-        <div class="grid">
+      <div class="grid">
             <!-- Header -->
-            <header class="row">
-                <div class="col-j6">
-                    <h1 class="logo" align="center">jf</h1>
-                </div>
-                <div class="col-j6">
-                    <h1 align="right">
-                        james fehr
-                    </h1>
-                    <h2 align="right">
-                        front end designer
-                    </h4>
-                </div>
-            </header>
-            <!-- Central Banner -->
-            <div class="divider"></div>
-            <section class="col-j12"><img class="banner" src="img\switz.jpg" alt="page art"></section>
-            <main class="divider-f">Featured Work
-            <!-- Featured Sites Area (Inline) -->
-
-
-            <!-- TODO:  -change images, link git repositories, add modal text/images -->
-                <section class="row" align="center" data-bind="foreach: projects">
-                    <article class="col-j4">
-                        <div class="col-j12" id="feat-item">
-                            <a data-bind="attr: {'href': url}"><img data-bind="attr: {'src': pic}"></a>
-                        </div>
-                        <div class="col-j12">
-                            <h3 data-bind="text: name"></h3><div data-bind="text: url"></div>
-                        </div>
-                    </article>
-                </section>
-            </main>
-            <script src="js/script.min.js"></script>
+      <header class="row">
+        <div class="col-j6">
+          <h1 class="logo" align="center">jf</h1>
         </div>
+        <div class="col-j6">
+          <h1 align="right">james fehr</h1>
+          <h2 align="right">front end designer</h4>
+        </div>
+      </header>
+      <!-- Central Banner -->
+      <div class="divider"></div>
+        <section class="col-j12"><img class="banner" src="img\switz.jpg" alt="page art"></section>
+        <main class="divider-f">Featured Work
+        <!-- Featured Sites Area (Inline) -->
+        <!-- TODO:  -change images, link git repositories, add modal text/images -->
+          <section class="row" align="center" data-bind="foreach: projects">
+            <article class="col-j4">
+              <div class="col-j12" id="feat-item">
+                <a data-bind="attr: {'href': url}"><img data-bind="attr: {'src': pic}"></a>
+              </div>
+              <div class="col-j12">
+                <h3 data-bind="text: name"></h3><div data-bind="text: url"></div>
+              </div>
+            </article>
+          </section>
+        </main>
+        <script src="js/script.min.js"></script>
+      </div>
     </body>
 </html>
