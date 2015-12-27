@@ -17,7 +17,7 @@ function ProjectViewModel() {
     new Project('Bugged', 'http://turtle-head.github.io/Bugged/', 'img/Bugged.png', 'https://github.com/Turtle-Head/Bugged'),
     new Project('Unknown Crusade Killboard', 'http://turtle-head.github.io/Killboard/', 'http://i.gyazo.com/f0b803fdc0df3565dc04b6d593490738.png', 'https://github.com/Turtle-Head/Killboard'),
     new Project('Cat Clicker', 'http://turtle-head.github.io/CatClicker/', 'http://i.gyazo.com/2698f87f89f83b0e581445550ba96768.png', 'https://github.com/Turtle-Head/CatClicker'),
-    new Project('Skel\'s Art Studio', 'http://skelsart.ca', 'https://i.gyazo.com/c93190753bb354d30549db3a9e923079.jpg', '')
+    new Project('Skel\'s Art Studio', 'http://skelsart.ca', 'https://i.gyazo.com/c93190753bb354d30549db3a9e923079.jpg', 'https://github.com/Turtle-Head/artshow-demo')
   ]);
 }
 
