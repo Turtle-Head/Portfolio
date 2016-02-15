@@ -16,7 +16,7 @@ function ProjectViewModel() {
     new Project('Bugged', 'http://turtle-head.github.io/Bugged/', 'img/Bugged.png', 'https://github.com/Turtle-Head/Bugged'),
     new Project('Unknown Crusade Killboard', 'http://turtle-head.github.io/Killboard/', 'img/UKCR.png', 'https://github.com/Turtle-Head/Killboard'),
     new Project('Cat Clicker', 'http://turtle-head.github.io/CatClicker/', 'img/CatClicker.png', 'https://github.com/Turtle-Head/CatClicker'),
-    new Project('Skel\'s Art Studio', 'http://skelsart.ca', 'img/skelsart.jpg', 'https://github.com/Turtle-Head/artshow-demo'),
+    new Project('Skel\'s Art Studio', 'http://skelsart.ca', 'img/skelsart.jpg', 'https://github.com/Turtle-Head/skelsart'),
     new Project('Gelp: Neighborhood Map Project', 'http://turtle-head.github.io/Project5/', 'img/gelp.jpg', 'https://github.com/Turtle-Head/Project5'),
     new Project('Feed Reader: Testing', 'http://turtle-head.github.io/FeedReader-P6/', 'img/feedreader.png', 'https://github.com/Turtle-Head/FeedReader-P6')
   ]);
