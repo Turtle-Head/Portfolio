@@ -5,13 +5,17 @@
 
 * {
     font-family: "Fira Sans";
-    color: #003300;
+    color: #33334d;
 }
 
 nav a,
 button {
   min-width:48;
   min-height:48;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -22,7 +26,7 @@ body {
 h1 {
     font-size: 96px;
     font-variant: small-caps;
-    font-weight: lighter;
+    font-weight: 400;
     font-family: "Fira Sans", verdana, sans-serif;
     /*align: right;
     text-align: right;*/
@@ -37,26 +41,24 @@ h2 {
     font-variant: small-caps;
     font-size: 24px;
     font-family: "Fira Sans", verdana, sans-serif;
-    /*align: right;
-    text-align: right;*/
     padding: 0;
     border: 0;
     margin: 0;
-    /*color: #999;*/
     word-wrap: none;
     vertical-align: middle;
 }
 
 h3 {
     font-variant: small-caps;
-    font-size: 20px;
+    font-size: 22px;
     align: center;
     font-family: "Fira Sans", verdana, sans-serif;
     text-align: center;
     padding: 0 0 0;
     line-height: 0.1;
-    /*color: #999;*/
     word-wrap: none;
+    text-decoration: none;
+    font-weight: 400;
 }
 
 img {
@@ -67,7 +69,7 @@ img {
 .divider {
     width: 100%;
     min-height: 5px;
-    background-color: #003300;
+    background-color: #33334d;
     align-self: center;
     font-family: "Fira Sans", verdana, sans-serif;
     font-weight: lighter;
@@ -79,16 +81,16 @@ img {
     min-height: 5px;
     align: relative 50;
     text-indent: 50;
-    color: #003300;
+    color: #33334d;
     font-family: "Fira Sans", verdana, sans-serif;
-    font-weight: lighter;
+    font-weight: 400;
     font-size: 22px;
 }
 
 
 .logo {
     border-radius: 70px 40px;
-    border: 10px solid #003300;
+    border: 10px solid #33334d;
     padding: 15px;
     width: 135px;
     height: 130px;
@@ -97,8 +99,17 @@ img {
 
 .banner {
     width: 100%;
+    height: 250px;
     padding-top: 5px;
+    background-color: #33334d;
+  	background-image:
+  	-webkit-linear-gradient(left, #4976C9, #33334d);
+  	background-image:
+  	-o-linear-gradient(left, #4976C9, #33334d);
+  	background-image:
+  	linear-gradient(to right, #4976C9, #33334d);
 }
+
 /* IDs */
 #feat-item {
     padding: 8.33%;
