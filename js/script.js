@@ -12,7 +12,7 @@ function ProjectViewModel() {
   var self = this;
 
   self.projects = ko.observableArray([
-    new Project('Portfolio', 'http://turtle-head.github.io/Portfolio', 'img/portfolio-min.png', 'https://github.com/Turtle-Head/Portfolio'),
+    new Project('Coding the little things', 'http://turtle-head.github.io/Coding-the-little-things/', 'img/code.png', 'http://turtle-head.github.io/Coding-the-little-things/'),
     new Project('Bugged', 'http://turtle-head.github.io/Bugged/', 'img/bugged-min.png', 'https://github.com/Turtle-Head/Bugged'),
     new Project('Killboard', 'http://turtle-head.github.io/Killboard/', 'img/ukcr-min.png', 'https://github.com/Turtle-Head/Killboard'),
     new Project('Cat Clicker', 'http://turtle-head.github.io/CatClicker/', 'img/catClicker-min.png', 'https://github.com/Turtle-Head/CatClicker'),
