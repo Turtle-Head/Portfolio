@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,3 +65,60 @@
       </div>
     </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="author" content="James Fehr">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css">
+        <link href="CSS/main.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/style.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        <title>James Fehr</title>
+    </head>
+
+    <body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+      <div class="grid">
+            <!-- Header -->
+      <header class="row">
+        <div class="col-j6">
+          <h1 class="logo" align="center">jf</h1>
+        </div>
+        <div class="col-j6">
+          <h1 align="right">james fehr</h1>
+          <h2 align="right">front end designer</h4>
+        </div>
+      </header>
+      <!-- Central Banner -->
+      <div class="divider"></div>
+        <section class="col-j12"><img class="banner" src="img\switz.jpg" alt="page art"></section>
+        <main class="divider-f">Featured Work
+        <!-- Featured Sites Area (Inline) -->
+        <!-- TODO:  -Keep Updated: add projects in script.js -->
+          <section class="row" align="center" data-bind="foreach: projects">
+            <article class="col-j4">
+              <div class="col-j12" id="feat-item">
+                <a href="" data-bind="attr: {'href': url}">
+                  <img data-bind="attr: {'src': pic}">
+                </a>
+              </div>
+              <div class="col-j12">
+                <h3 data-bind="text: name"></h3>
+                <div data-bind="text: url"></div>Repository:
+                <a data-bind="attr: {'href': git}">
+                  <div data-bind="text: git"></div>
+                </a>
+              </div>
+            </article>
+          </section>
+        </main>
+        <script src="js/script.min.js"></script>
+      </div>
+    </body>
+</html>
+>>>>>>> 830b1524b7f6e089da39c00038d35075b08575fb
