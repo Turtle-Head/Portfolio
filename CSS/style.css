@@ -116,7 +116,7 @@ img {
 
 
 .logo {
-display:block;
+    display:block;
     border-radius: 70px 40px;
     border: 10px solid #33334d;
     padding: 15px;
