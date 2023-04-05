@@ -1,0 +1,102 @@
+/*  Stylesheet for Project 1 of Udacity FEND program    */
+/*  Author: James Fehr  */
+
+/* ELEMENTS */
+
+* {
+    font-family: "Fira Sans";
+}
+
+nav a,
+button {
+  min-width:48;
+  min-height:48;
+}
+
+body {
+    background-color: #231f20;
+}
+
+h1 {
+    font-size: 96px;
+    font-variant: small-caps;
+    font-weight: lighter;
+    font-family: "Fira Sans", verdana, sans-serif;
+    /*align: right;
+    text-align: right;*/
+    padding: 0;
+    border: 0;
+    margin: 0;
+    color: #999;
+    word-wrap: none;
+}
+
+h2 {
+    font-variant: small-caps;
+    font-size: 24px;
+    font-family: "Fira Sans", verdana, sans-serif;
+    /*align: right;
+    text-align: right;*/
+    padding: 0;
+    border: 0;
+    margin: 0;
+    color: #999;
+    word-wrap: none;
+    vertical-align: middle;
+}
+
+h3 {
+    font-variant: small-caps;
+    font-size: 20px;
+    align: center;
+    font-family: "Fira Sans", verdana, sans-serif;
+    text-align: center;
+    padding: 0 0 0;
+    line-height: 0.1;
+    color: #999;
+    word-wrap: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* CLASSES */
+.divider {
+    width: 100%;
+    min-height: 5px;
+    background-color: #999;
+    align-self: center;
+    font-family: "Fira Sans", verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 22px;
+}
+
+.divider-f {
+    width: 100%;
+    min-height: 5px;
+    align: relative 50;
+    text-indent: 50;
+    color: #999;
+    font-family: "Fira Sans", verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 22px;
+}
+
+
+.logo {
+    border-radius: 70px 40px;
+    border: 10px solid #999;
+    padding: 15px;
+    width: 135px;
+    height: 130px;
+    align: center;
+}
+
+.banner {
+    width: 100%;
+}
+/* IDs */
+#feat-item {
+    padding: 8.33%;
+}
