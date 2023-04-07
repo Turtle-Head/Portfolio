@@ -65,6 +65,12 @@ function ProjectViewModel () {
       'https://github.com/Turtle-Head/AirBub',
       'img/AirBus.png',
       'https://github.com/Turtle-Head/AirBub'
+    ),
+    new Project(
+      'BattleShip',
+      'https://github.com/Turtle-Head/BattleShip',
+      'img/BS3.png',
+      'https://github.com/Turtle-Head/BattleShip'
     )
   ])
 }
