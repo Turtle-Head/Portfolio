@@ -71,7 +71,11 @@ function ProjectViewModel () {
       'https://github.com/Turtle-Head/BattleShip',
       'img/BS3.png',
       'https://github.com/Turtle-Head/BattleShip'
-    )
+    ),
+    new Project(
+      'Kingdom',
+      'Kingdom',
+      'https://github.com/Turtle-Head/Dog/tree/main'
   ])
 }
 
