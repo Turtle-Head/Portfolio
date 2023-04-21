@@ -43,34 +43,9 @@ function ProjectViewModel () {
       'https://github.com/Turtle-Head/FeedReader-P6'
     ),
     new Project(
-      'CleanUp',
-      'https://turtle-head.github.io/CleanUp/index.html',
-      'img/water-1761027.jpg',
-      'https://github.com/Turtle-Head/CleanUp'
-    ),
-    new Project(
-      'CalculatorV2',
-      'https://github.com/Turtle-Head/CalculatorV2',
-      'img/calcV2.png',
-      'https://github.com/Turtle-Head/CalculatorV2'
-    ),
-    new Project(
-      'Calculator-v6',
-      'https://github.com/Turtle-Head/Calculator-v6',
-      'img/CalcV6.png',
-      'https://github.com/Turtle-Head/Calculator-v6'
-    ),
-    new Project(
-      'AirBus',
-      'https://github.com/Turtle-Head/AirBub',
-      'img/AirBus.png',
-      'https://github.com/Turtle-Head/AirBub'
-    ),
-    new Project(
-      'BattleShip',
-      'https://github.com/Turtle-Head/BattleShip',
-      'img/BS3.png',
-      'https://github.com/Turtle-Head/BattleShip'
+      'Kingdom',
+      'img/Kingdom.png',
+      'https://github.com/Turtle-Head/Dog/tree/main'
     )
   ])
 }
