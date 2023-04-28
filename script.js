@@ -74,11 +74,13 @@ function ProjectViewModel () {
     ),
     new Project(
       'Kingdom',
+      'https://github.com/Turtle-Head/Dog/tree/main',
       'img/Kingdom.png',
       'https://github.com/Turtle-Head/Dog/tree/main'
     ),
     new Project(
        'Club',
+       'https://github.com/Turtle-Head/Club',
        'img/Club.png',
        'https://github.com/Turtle-Head/Club'
 	)
