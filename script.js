@@ -13,7 +13,7 @@ function ProjectViewModel () {
 
   self.projects = ko.observableArray([
     new Project(
-      'Coding the little things',
+      'Coding...',
       'http://turtle-head.github.io/Coding-the-little-things/',
       'img/code.png',
       'http://turtle-head.github.io/Coding-the-little-things/'
