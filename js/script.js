@@ -55,7 +55,7 @@ function ProjectViewModel () {
       'https://github.com/Turtle-Head/CalculatorV2'
     ),
     new Project(
-      'Calculator-v6',
+      'CalculatorV6',
       'https://github.com/Turtle-Head/Calculator-v6',
       'img/CalcV6.png',
       'https://github.com/Turtle-Head/Calculator-v6'
