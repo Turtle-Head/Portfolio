@@ -6,6 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Add your CSS here -->
   <style>
+    .grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+    }
     .project-grid {
       display: flex;
       flex-wrap: wrap;
@@ -39,6 +51,21 @@
   </style>
 </head>
 <body>
+  <div class="grid">
+    <!-- Header -->
+       
+      
+      <!-- Central Banner -->
+      <div class="divider"></div>
+        <section class="col-j12"><img class="banner" src="img\switz.jpg" alt="page art"></section>
+        <div class="divider"></div>
+        <div class="col-j6">
+        <h1 align="flex">James Fehr</h1>
+        <h2 align="flex-direction">General IT Developer</h2>
+        </div>
+        </header>
+        <main class="divider-f">Featured Work
+        <!-- Featured Sites Area (Inline) -->
   <div id="root"></div>
   <!-- React and ReactDOM via CDN -->
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
@@ -50,7 +77,7 @@
     const projects = [
       {
         name: 'Portfolio',
-        url: 'http://turtle-head.github.io/Portfolio',
+        url: 'https://turtle-head.github.io/PortfolioDeux/://turtle-head.github.io/Portfolio',
         pic: 'img/Portfolio.png',
         git: 'https://github.com/Turtle-Head/Portfolio'
       },
