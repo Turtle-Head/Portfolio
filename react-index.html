@@ -9,7 +9,7 @@
     .banner {
       width: 100%;
       height: auto;
-      margin-bottom: 1rem;
+      /* margin-bottom: 1rem; */
     }
     .grid {
       display: flex;
@@ -37,6 +37,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      font-size: small;
     }
     .project-card img {
       width: 100%;
@@ -51,40 +52,84 @@
     .project-links a {
       margin: 0 0.5rem;
       text-decoration: none;
-      color: #007acc;
+      color: black;
+      font-size: 12px;
     }
-    
+    #header {
+      background: #ffffff;
+      color: black;
+      font-family: Droid Sans;
+      font-size: 18px;
+      /* line-height: 1.6em; */
+      font-weight: bold;
+      text-align: center;
+      /* padding: 7px; */
+      text-shadow: 0 1px 1px rgba(0,0,0,.2);
+      width:100%;
+      box-sizing:border-box;
+    }
+    .divider {
+      width: 100%;
+      height: 2px;
+      background-color: #020000;
+      margin: 0.01rem 0;
+    }
+    #feat {
+      color: #020000;
+      font-family: Droid Sans;
+      font-weight: bold;
+      text-align: left;
+      font-size: 16pt;
+      margin: 0.1rem 0;
+    }
+    .h1 {
+      color: #020000;
+      font-family: Droid Sans;
+      font-weight: bold;
+      text-align: center;
+      font-size: 16pt;
+      margin: 0.1rem 0;
+    }
+    #mail {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <div class="grid">
-    <!-- Header -->
-       
+
+<!-- Header -->
       
-      <!-- Central Banner -->
-      <div class="divider"></div>
-        <section class="banner"><img class="banner" src="img\switz.jpg" alt="page art"></section>
-        <div class="divider"></div>
-        <div class="col-j6">
-        <h1 align="flex">James Fehr</h1>
-        <h2 align="flex-direction">General IT Developer</h2>
-        </div>
-        </section>
-        </header>
-        <main class="divider-f">Featured Work
-        <!-- Featured Sites Area (Inline) -->
-  <div id="root"></div>
-  <!-- React and ReactDOM via CDN -->
-  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <!-- Babel for JSX -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <!-- Your React code -->
-  <script type="text/babel">
+<!-- Central Banner -->
+
+<section class="banner">
+  <img class="banner" src="img\switz.jpg" alt="page art">
+</section>
+<div id="header">       
+<h1>James Fehr</a></h1>
+<h2>General IT Developer</h2>
+<h3>
+  <div class="a" id="mail">
+    <a href="mailto:fehr.james@gmail.com"><img src="img/mail.png" height="25px" width="25px"></a>
+  </div>
+</h3>
+</div>
+</section>
+</header>
+<main id="feat">Featured Work
+<div class="divider"></div>
+<!-- Featured Sites Area (Inline) -->
+<div id="root"></div>
+<!-- React and ReactDOM via CDN -->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<!-- Babel for JSX -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your React code -->
+<script type="text/babel">
     const projects = [
       {
         name: 'Portfolio',
-        url: 'https://turtle-head.github.io/PortfolioDeux/://turtle-head.github.io/Portfolio',
+        url: 'https://turtle-head.github.io/Portfolio',
         pic: 'img/Portfolio.png',
         git: 'https://github.com/Turtle-Head/Portfolio'
       },
@@ -94,7 +139,8 @@
         pic: 'img/code.png',
         git: 'https://github.com/Turtle-Head/Coding-the-little-things'
        
-      },      {
+      },      
+      {
         name: 'Bugged',
         url: 'http://turtle-head.github.io/Bugged/',
         pic: 'img/Bugged.png',
@@ -155,37 +201,34 @@
       pic:  'img/BS3.png',
       git:  'https://github.com/Turtle-Head/BattleShip'
     },
-  {
+    {
       name: 'Club',
       url:  'https://github.com/Turtle-Head/Club',
       pic:  'img/Club.png',
       git:  'https://github.com/Turtle-Head/Club'
     }
+  
     ];
-
-    function ProjectCard({ project }) {
-      return (
-        <div className="project-card">
-          <img src={project.pic} alt={project.name} />
-          <h3>{project.name}</h3>
-          <div className="project-links">
-            <a href={project.url} target="_blank" rel="noopener noreferrer">Live</a>
-            <a href={project.git} target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </div>
-      );
-    }
-
-    function ProjectGrid() {
-      return (
-        <div className="project-grid">
-          {projects.map((project, idx) => (
-            <ProjectCard key={idx} project={project} />
-          ))}
-        </div>
-      );
-    }
-
+// Create a ProjectCard component
+function ProjectCard({ project }) {
+return (
+    <div className="project-card">
+      <img src={project.pic} alt={project.name} />
+      <h3>{project.name}</h3>
+      <div className="project-links">
+      <a href={project.url} target="_blank" rel="noopener noreferrer">Live</a>
+      <a href={project.git} target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+   </div>
+  );
+ }
+function ProjectGrid() {
+return (
+<div className="project-grid">
+{projects.map((project, idx) => (
+<ProjectCard key={idx} project={project} />))}
+  </div>
+);}
     ReactDOM.createRoot(document.getElementById('root')).render(<ProjectGrid />);
   </script>
 </body>
