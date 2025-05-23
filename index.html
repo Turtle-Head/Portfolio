@@ -1,65 +1,207 @@
+<!-- Author: James Fehr  -->
+<!-- index for ProtfolioDeux -->
+<!-- Project for ICR100 ITD  -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="author" content="James Fehr">
-        <meta name="description" content="Website Design, British Columbia, Vancouver, HTML5 code, JavaScript, CSS, James Fehr, Portfolio, HTML5, JavaScript, CSS, Front End Design, Front End Web Developer, Web Development, Web, HTML, JS">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css">
-        <link href="CSS/main.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="CSS/style.min.css">
-        <link href="http://fonts.googleapis.com/css?family=Fira+Sans:400,700" rel="stylesheet" type="text/css">
-        <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-73697725-1', 'auto');
-        ga('send', 'pageview');
-        </script>
-        <title>James Fehr</title>
-        <link rel="icon" type="image/png" href="j.png"/>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Website Design, British Columbia, Vancouver, HTML5 code, JavaScript, CSS, James Fehr, Portfolio, HTML5, JavaScript, CSS, Front End Design, Front End Web Developer, Web Development, Web, HTML, JS">
+    <title>James Fehr</title>
+    <link rel="icon" type="image/png" href=".\img\j.png" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body background=".\img\b-back.jpg">
+    <div class="ndisp">
+      <h1 class="banner">
+        james fehr
+        <a
+          href="https://github.com/Turtle-Head"
+          target="https://github.com/Turtle-Head/PortfolioDeux/edit/main/index.html"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="gh"
+            src=".\img\gh.png"
+            height="15px"
+            width="15px"
+            alt="Github Profile"
+          />
+        </a>
+      </h1>
+      <h3 class="flex-items">General IT Programmer</h3>
+    </div>
+    <div>
+      <div class="nav">
 
-    <body>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
-      <div class="grid">
-            <!-- Header -->
-      <header class="row">
-        <div class="col-j6">
-          <h1 class="logo" align="center"><a href="https://turtle-head.github.io/PortfolioDeux/">jf</a></h1>
-        </div>
-        <div class="col-j6">
-          <h1 align="right"><a href=mailto:fehr.james@gmail.com>james fehr</a></h1>
-          <h2 align="right">general IT programmer</h4>
-        </div>
-      </header>
-      <!-- Central Banner -->
-      <div class="divider"></div>
-        <section class="col-j12"><div class="banner"></div></section>
-        <main class="divider-f">Featured Work
-        <!-- Featured Sites Area (Inline) -->
-        <!-- TODO:  -Keep Updated: add projects in script.js -->
-          <section class="row" align="center" data-bind="foreach: projects">
-            <article class="col-j4">
-              <div class="col-j12" id="feat-item">
-                <a href="" data-bind="attr: {'href': url}" target="_blank">
-                  <img data-bind="attr: {'src': pic}">
-                </a>
-              </div>
-              <div class="col-j12">
-                <a data-bind="attr: {'href': url}" target="_blank">
-                  <h3 data-bind="text: name"></h3>
-                </a>
-                <a data-bind="attr: {'href': git}" target="_blank"  align="center">
-                  <img src="img/GitHub-Mark-32px.png"  width="32px" height="32px" alt="GitHub">
-                </a>
-              </div>
-            </article>
-          </section>
-        </main>
-        <script src="js/script.min.js"></script>
+        <a href="./contact.html">Contact Form</a>
       </div>
-    </body>
+      <div class="nav">
+        <div class="dropdown">
+          <button class="dropbtn" onhover="myFunction()">
+            Projects
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <!--The dropdown list of sites -->
+          <div class="dropdown-content" id="myDropdown">
+              <a
+                href="https://turtle-head.github.io/Portfolio/"
+                target="_self"
+                rel="noopener noreferrer">
+                Projects
+              </a>
+            <div class="dropdown-content" id="myDropdown">
+              <a
+                href="https://turtle-head.github.io/Portfolio/react-index.html"
+                target="_self"
+                rel=noopener nonreferrer>
+                React.JS Project listing
+              </a>
+              <div class="dropdown-content" id="myDropdown">
+                <a
+                  href=".\vids.html"
+                  target="_self"
+                  rel="noopener noreferrer">
+                  Vids of Projects
+                </a>
+          </div>
+      <!-- Side project as a way of sharing what I have learned about google maps -->
+
+        </div>
+      </div>
+    </div>
+    </div>
+    <br>
+    <div class="sk_basket">
+    <div class="hDiv">Programming Languages</div>
+    <div class="hide"><ul>
+      <li>HTML5 - 7+ yrs</li>
+      <li>CSS:CascadingStyleSheets - 7+ yrs</li>
+      <li>XML - 7+ yrs</li>
+      <li>JavaScript - 7+ yrs</li>
+      <ul>Javascript Frameworks:
+        <li>JQuery.js - 7+ yrs</li>
+        <li>Bootstrap.js - 7+ yrs</li>
+        <li>Knockout.js - 7+ yrs</li>
+      </ul>
+      <li>Visual Basic - 2+ yrs</li>
+      <li>SQL: StructuredQueryLanguage - 1+ yrs</li>
+      <li>C - 7+ yrs</li>
+      <li>C++ - 2+ yrs</li>
+      <li>C# - 2+ yrs</li>
+      <li>Python - 2+ yrs</li>
+      <li>PHP - 5+ yrs</li>
+    </ul>
+  </div>
+  <br>
+    <div class="hDiv">Websites</div>
+    <div class="hide"><ul>
+      <li>Portfolio<ul>
+        <li>JavaScript: Knockout.js</li>
+        <li>HTML, CSS</li>
+      </ul></li>
+      <br>
+    <li>Coding the little things<ul>
+      <li>JavaScript</li>
+      <li>HTML, CSS</li>
+    </ul></li>
+    <br>
+    <li>Bugged<ul>
+      <li>JavaScript</li>
+    </ul></li>
+    <br>
+    <li>Cat Clicker<ul>
+      <li>Javascript</li>
+      <li>HTML, CSS</li>
+    </ul></li>
+    <br>
+    <li>Gelp<ul>
+      <li>JavaScript</li>
+      <li>HTML, CSS</li>
+      </ul></li>
+      <br>
+      <li>Feedreader<ul>
+        <li>JavaScript: Jasmine</li>
+        <li>HTML, CSS</li>
+      </ul></li>
+      <br>
+    </ul></div>
+    <br>
+    <div class="hDiv">Websites: part Deux</div>
+    <div class="hide"><ul>
+      <li>ProtfolioDeux<ul>
+        <li>JavaScript</li>
+        <li>HTML, CSS</li>
+      </ul></li>
+      <br>
+      <li>CleanUp<ul>
+        <li>HTML, CSS</li>
+      </ul></li>
+      <br>
+    </ul></div>
+    <br>
+    <div class="hDiv">Visual Basic Projects</div>
+    <div class="hide"><ul>
+      <li>CalculatorV2<ul>
+        <li>Visual Basic</li>
+      </ul></li>
+      <br>
+      <li>AirBus<ul>
+        <li>Visual Basic</li>
+        <li>SQL</li>
+      </ul></li>
+    </ul>
+    <br>
+    </div>
+    <br>
+    <div class="hDiv">C# Projects</div>
+    <div class="hide"><ul>
+      <li>Calculator-v6<ul>
+        <li>C#</li>
+      </ul></li>
+      <br>
+      <li>BattleShip<ul>
+        <li>C#</li>
+      </ul></li>
+      <br>
+      <li>Club<ul>
+        <li>ASP.Net, C#</li>
+      </ul></li>
+    </ul>
+    </ul>
+  </div>
+  <br>
+  <div class="hDiv">IDEs</div>
+    <div class="hide"><ul>
+    <li>WordPress</li>
+    <li>Visual Studio Code</li>
+    <li>Visual Studio 2022</li>
+    </ul>
+    </div>
+    <footer></footer>
+    <!-- Javascript for dropdowns -->
+    <script>
+/* When the user hovers over the button,
+toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById('myDropdown').classList.toggle('show')
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches('.dropbtn')) {
+          var myDropdown = document.getElementById('myDropdown')
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show')
+          }
+        }
+      }
+    </script>
+    <!-- End of Javascript -->
+  </body>
 </html>
