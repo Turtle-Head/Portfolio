@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Add your CSS here -->
+  <style>
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .project-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 250px;
+      box-shadow: 2px 2px 8px #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .project-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .project-card h3 {
+      margin: 0.5rem 0;
+    }
+    .project-links a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #007acc;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <!-- React and ReactDOM via CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel for JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your React code -->
+  <script type="text/babel">
+    const projects = [
+      {
+        name: 'Portfolio',
+        url: 'http://turtle-head.github.io/Portfolio',
+        pic: 'img/Portfolio.png',
+        git: 'https://github.com/Turtle-Head/Portfolio'
+      },
+      {
+        name: 'Coding the little things',
+        url: 'http://turtle-head.github.io/Coding-the-little-things/',
+        pic: 'img/code.png',
+        git: 'https://github.com/Turtle-Head/Coding-the-little-things'
+       
+      },      {
+        name: 'Bugged',
+        url: 'http://turtle-head.github.io/Bugged/',
+        pic: 'img/Bugged.png',
+        git: 'https://github.com/Turtle-Head/Bugged'
+      },
+      {
+        name: 'Unknown Crusade Killboard',
+        url: 'http://turtle-head.github.io/Killboard/',
+        pic: 'img/UKCR.png',
+        git: 'https://github.com/Turtle-Head/Killboard'
+      },
+      {
+        name: 'Cat Clicker',
+        url: 'http://turtle-head.github.io/CatClicker/',
+        pic: 'img/CatClicker.png',
+        git: 'https://github.com/Turtle-Head/CatClicker'
+      },
+   
+      {
+        name: 'Gelp: Neighborhood Map Project',
+        url: 'http://turtle-head.github.io/Project5/',
+        pic: 'img/gelp.jpg',
+        git: 'https://github.com/Turtle-Head/Project5'
+      },
+      {
+        name: 'Feed Reader: Testing',
+        url: 'http://turtle-head.github.io/FeedReader-P6/',
+        pic: 'img/feedreader.png',
+        git: 'https://github.com/Turtle-Head/FeedReader-P6'
+      },
+      {
+        name: 'CleanUp',
+        url: 'https://turtle-head.github.io/CleanUp/index.html',
+        pic: 'img/water-1761027.jpg',
+        git: 'https://github.com/Turtle-Head/CleanUp'
+    },
+    {
+      name: 'CalculatorV2',
+      url: 'https://github.com/Turtle-Head/CalculatorV2',
+      pic: 'img/calcV2.png',
+      git: 'https://github.com/Turtle-Head/CalculatorV2'
+    },
+    {
+      name: 'CalculatorV6',
+      url: 'https://github.com/Turtle-Head/Calculator-v6',
+      pic: 'img/CalcV6.png',
+      git: 'https://github.com/Turtle-Head/Calculator-v6'
+    },
+    {
+      name: 'AirBus',
+      url:  'https://github.com/Turtle-Head/AirBub',
+      pic:  'img/AirBus.png',
+      git: 'https://github.com/Turtle-Head/AirBub'
+    },
+    {
+      name: 'Battleship',
+      url:  'https://github.com/Turtle-Head/BattleShip',
+      pic:  'img/BS3.png',
+      git:  'https://github.com/Turtle-Head/BattleShip'
+    },
+  {
+      name: 'Club',
+      url:  'https://github.com/Turtle-Head/Club',
+      pic:  'img/Club.png',
+      git:  'https://github.com/Turtle-Head/Club'
+    }
+    ];
+
+    function ProjectCard({ project }) {
+      return (
+        <div className="project-card">
+          <img src={project.pic} alt={project.name} />
+          <h3>{project.name}</h3>
+          <div className="project-links">
+            <a href={project.url} target="_blank" rel="noopener noreferrer">Live</a>
+            <a href={project.git} target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      );
+    }
+
+    function ProjectGrid() {
+      return (
+        <div className="project-grid">
+          {projects.map((project, idx) => (
+            <ProjectCard key={idx} project={project} />
+          ))}
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<ProjectGrid />);
+  </script>
+</body>
+</html>
