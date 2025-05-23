@@ -1,207 +1,187 @@
-<!-- Author: James Fehr  -->
-<!-- index for ProtfolioDeux -->
-<!-- Project for ICR100 ITD  -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Website Design, British Columbia, Vancouver, HTML5 code, JavaScript, CSS, James Fehr, Portfolio, HTML5, JavaScript, CSS, Front End Design, Front End Web Developer, Web Development, Web, HTML, JS">
-    <title>James Fehr</title>
-    <link rel="icon" type="image/png" href=".\img\j.png" />
-    <link rel="stylesheet" href="css/style.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body background=".\img\b-back.jpg">
-    <div class="ndisp">
-      <h1 class="banner">
-        james fehr
-        <a
-          href="https://github.com/Turtle-Head"
-          target="https://github.com/Turtle-Head/PortfolioDeux/edit/main/index.html"
-          rel="noopener noreferrer"
-        >
-          <img
-            class="gh"
-            src=".\img\gh.png"
-            height="15px"
-            width="15px"
-            alt="Github Profile"
-          />
-        </a>
-      </h1>
-      <h3 class="flex-items">General IT Programmer</h3>
-    </div>
-    <div>
-      <div class="nav">
 
-        <a href="./contact.html">Contact Form</a>
-      </div>
-      <div class="nav">
-        <div class="dropdown">
-          <button class="dropbtn" onhover="myFunction()">
-            Projects
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <!--The dropdown list of sites -->
-          <div class="dropdown-content" id="myDropdown">
-              <a
-                href="https://turtle-head.github.io/Portfolio/"
-                target="_self"
-                rel="noopener noreferrer">
-                Projects
-              </a>
-            <div class="dropdown-content" id="myDropdown">
-              <a
-                href="https://turtle-head.github.io/Portfolio/react-index.html"
-                target="_self"
-                rel=noopener nonreferrer>
-                React.JS Project listing
-              </a>
-              <div class="dropdown-content" id="myDropdown">
-                <a
-                  href=".\vids.html"
-                  target="_self"
-                  rel="noopener noreferrer">
-                  Vids of Projects
-                </a>
-          </div>
-      <!-- Side project as a way of sharing what I have learned about google maps -->
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="author" content="James Fehr">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css">
+         <link href="CSS/main.min.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="CSS/style.css">
+        <link href="http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        <title>James Fehr</title>
+    </head>
+  <!-- Add your CSS here -->
+  <style>
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .project-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 250px;
+      box-shadow: 2px 2px 8px #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .project-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .project-card h3 {
+      margin: 0.5rem 0;
+    }
+    .project-links a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #007acc;
+    }
+  </style>
+    <body>
+     
+  <!-- React and ReactDOM via CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel for JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your React code -->
 
+      <div class="grid">
+            <!-- Header -->
+      <header class="row">
+        <div class="col-j6">
+          <h1 class="logo" align="center">jf</h1>
         </div>
-      </div>
-    </div>
-    </div>
-    <br>
-    <div class="sk_basket">
-    <div class="hDiv">Programming Languages</div>
-    <div class="hide"><ul>
-      <li>HTML5 - 7+ yrs</li>
-      <li>CSS:CascadingStyleSheets - 7+ yrs</li>
-      <li>XML - 7+ yrs</li>
-      <li>JavaScript - 7+ yrs</li>
-      <ul>Javascript Frameworks:
-        <li>JQuery.js - 7+ yrs</li>
-        <li>Bootstrap.js - 7+ yrs</li>
-        <li>Knockout.js - 7+ yrs</li>
-      </ul>
-      <li>Visual Basic - 2+ yrs</li>
-      <li>SQL: StructuredQueryLanguage - 1+ yrs</li>
-      <li>C - 7+ yrs</li>
-      <li>C++ - 2+ yrs</li>
-      <li>C# - 2+ yrs</li>
-      <li>Python - 2+ yrs</li>
-      <li>PHP - 5+ yrs</li>
-    </ul>
-  </div>
-  <br>
-    <div class="hDiv">Websites</div>
-    <div class="hide"><ul>
-      <li>Portfolio<ul>
-        <li>JavaScript: Knockout.js</li>
-        <li>HTML, CSS</li>
-      </ul></li>
-      <br>
-    <li>Coding the little things<ul>
-      <li>JavaScript</li>
-      <li>HTML, CSS</li>
-    </ul></li>
-    <br>
-    <li>Bugged<ul>
-      <li>JavaScript</li>
-    </ul></li>
-    <br>
-    <li>Cat Clicker<ul>
-      <li>Javascript</li>
-      <li>HTML, CSS</li>
-    </ul></li>
-    <br>
-    <li>Gelp<ul>
-      <li>JavaScript</li>
-      <li>HTML, CSS</li>
-      </ul></li>
-      <br>
-      <li>Feedreader<ul>
-        <li>JavaScript: Jasmine</li>
-        <li>HTML, CSS</li>
-      </ul></li>
-      <br>
-    </ul></div>
-    <br>
-    <div class="hDiv">Websites: part Deux</div>
-    <div class="hide"><ul>
-      <li>ProtfolioDeux<ul>
-        <li>JavaScript</li>
-        <li>HTML, CSS</li>
-      </ul></li>
-      <br>
-      <li>CleanUp<ul>
-        <li>HTML, CSS</li>
-      </ul></li>
-      <br>
-    </ul></div>
-    <br>
-    <div class="hDiv">Visual Basic Projects</div>
-    <div class="hide"><ul>
-      <li>CalculatorV2<ul>
-        <li>Visual Basic</li>
-      </ul></li>
-      <br>
-      <li>AirBus<ul>
-        <li>Visual Basic</li>
-        <li>SQL</li>
-      </ul></li>
-    </ul>
-    <br>
-    </div>
-    <br>
-    <div class="hDiv">C# Projects</div>
-    <div class="hide"><ul>
-      <li>Calculator-v6<ul>
-        <li>C#</li>
-      </ul></li>
-      <br>
-      <li>BattleShip<ul>
-        <li>C#</li>
-      </ul></li>
-      <br>
-      <li>Club<ul>
-        <li>ASP.Net, C#</li>
-      </ul></li>
-    </ul>
-    </ul>
-  </div>
-  <br>
-  <div class="hDiv">IDEs</div>
-    <div class="hide"><ul>
-    <li>WordPress</li>
-    <li>Visual Studio Code</li>
-    <li>Visual Studio 2022</li>
-    </ul>
-    </div>
-    <footer></footer>
-    <!-- Javascript for dropdowns -->
-    <script>
-/* When the user hovers over the button,
-toggle between hiding and showing the dropdown content */
-      function myFunction() {
-        document.getElementById('myDropdown').classList.toggle('show')
-      }
+        <div class="col-j6">
+          <h1 align="right">james fehr</h1>
+          <h2 align="right">front end designer</h4>
+        </div>
+      </header>
+      <!-- Central Banner -->
+      <div class="divider"></div>
+        <section class="col-j12"><img class="banner" src="img\switz.jpg" alt="page art"></section>
+        <main class="divider-f">Featured Work
+        <!-- Featured Sites Area (Inline) -->
+        <!-- TODO:  -Keep Updated: add projects in script.js -->
+      <script type="text/babel">
+      const projects = [
+      {
+        name: 'Portfolio',
+        url: 'https://turtle-head.github.io/PortfolioDeux/',
+        pic: 'img/Portfolio.png',
+        git: 'https://github.com/Turtle-Head/Portfolio'
+      },
+      {
+        name: 'Coding the little things',
+        url: 'http://turtle-head.github.io/Coding-the-little-things/',
+        pic: 'img/code.png',
+        git: 'https://github.com/Turtle-Head/Coding-the-little-things'
+       
+      },      {
+        name: 'Bugged',
+        url: 'http://turtle-head.github.io/Bugged/',
+        pic: 'img/Bugged.png',
+        git: 'https://github.com/Turtle-Head/Bugged'
+      },
+      {
+        name: 'Unknown Crusade Killboard',
+        url: 'http://turtle-head.github.io/Killboard/',
+        pic: 'img/UKCR.png',
+        git: 'https://github.com/Turtle-Head/Killboard'
+      },
+      {
+        name: 'Cat Clicker',
+        url: 'http://turtle-head.github.io/CatClicker/',
+        pic: 'img/CatClicker.png',
+        git: 'https://github.com/Turtle-Head/CatClicker'
+      },
+   
+      {
+        name: 'Gelp: Neighborhood Map Project',
+        url: 'http://turtle-head.github.io/Project5/',
+        pic: 'img/gelp.jpg',
+        git: 'https://github.com/Turtle-Head/Project5'
+      },
+      {
+        name: 'Feed Reader: Testing',
+        url: 'http://turtle-head.github.io/FeedReader-P6/',
+        pic: 'img/feedreader.png',
+        git: 'https://github.com/Turtle-Head/FeedReader-P6'
+      },
+      {
+        name: 'CleanUp',
+        url: 'https://turtle-head.github.io/CleanUp/index.html',
+        pic: 'img/water-1761027.jpg',
+        git: 'https://github.com/Turtle-Head/CleanUp'
+    },
+    {
+      name: 'CalculatorV2',
+      url: 'https://github.com/Turtle-Head/CalculatorV2',
+      pic: 'img/calcV2.png',
+      git: 'https://github.com/Turtle-Head/CalculatorV2'
+    },
+    {
+      name: 'CalculatorV6',
+      url: 'https://github.com/Turtle-Head/Calculator-v6',
+      pic: 'img/CalcV6.png',
+      git: 'https://github.com/Turtle-Head/Calculator-v6'
+    },
+    {
+      name: 'AirBus',
+      url:  'https://github.com/Turtle-Head/AirBub',
+      pic:  'img/AirBus.png',
+      git: 'https://github.com/Turtle-Head/AirBub'
+    },
+    {
+      name: 'Battleship',
+      url:  'https://github.com/Turtle-Head/BattleShip',
+      pic:  'img/BS3.png',
+      git:  'https://github.com/Turtle-Head/BattleShip'
+    },
+  {
+      name: 'Club',
+      url:  'https://github.com/Turtle-Head/Club',
+      pic:  'img/Club.png',
+      git:  'https://github.com/Turtle-Head/Club'
+    }
+    ];
 
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function (e) {
-        if (!e.target.matches('.dropbtn')) {
-          var myDropdown = document.getElementById('myDropdown')
-          if (myDropdown.classList.contains('show')) {
-            myDropdown.classList.remove('show')
-          }
-        }
-      }
-    </script>
-    <!-- End of Javascript -->
-  </body>
+    function ProjectCard({ project }) {
+      return (
+        <div className="project-card">
+          <img src={project.pic} alt={project.name} />
+          <h3>{project.name}</h3>
+          <div className="project-links">
+            <a href={project.url} target="_blank" rel="noopener noreferrer">Live</a>
+            <a href={project.git} target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      );
+    }
+
+    function ProjectGrid() {
+      return (
+        <div className="project-grid">
+          {projects.map((project, idx) => (
+            <ProjectCard key={idx} project={project} />
+          ))}
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<ProjectGrid />);
+  </script>
+    
+        </main>
+        <script src="js/script.min.js"></script>
+      </div>
+    </body>
 </html>
