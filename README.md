@@ -10,3 +10,4 @@ a demonstration of my ability to create sites using React.js as the main javascr
 <br>
 -Replaced Knockout.js with React.js <br>
 -refactored to make several esthetic changes<br>
+-added show/hide function to the Featured Work button
