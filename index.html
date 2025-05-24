@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="author" content="James Fehr">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css">
-         <link href="CSS/main.min.css" rel="stylesheet"> 
-        <link rel="stylesheet" href="CSS/style.css">
-        <link href="http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-        <title>James Fehr</title>
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Website Design, British Columbia, Vancouver, HTML5 code, JavaScript, CSS, James Fehr, Portfolio, HTML5, JavaScript, CSS, Front End Design, Front End Web Developer, Web Development, Web, HTML, JS">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>James Fehr</title>
+  <link rel="icon" type="image/png" href=".\img\j.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Add your CSS here -->
+  <link href="http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8b+z4x2e5c5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8b+z4x2e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
   <style>
+    .banner {
+      width: 100%;
+      height: auto; 
+    }
+    .grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+    }
     .project-grid {
       display: flex;
       flex-wrap: wrap;
@@ -28,6 +42,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      font-size: small;
     }
     .project-card img {
       width: 100%;
@@ -42,116 +57,94 @@
     .project-links a {
       margin: 0 0.5rem;
       text-decoration: none;
-      color: #007acc;
+      color: black;
+      font-size: 12px;
+    }
+    #header {
+      background: #ffffff;
+      color: black;
+      font-family: Droid Sans;
+      font-size: 18px;
+      line-height: 1.6em;
+      font-weight: bold;
+      text-align: left;
+      padding: 27px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.2);
+      width:100%;
+      box-sizing:border-box;
+    }
+    .divider {
+      width: 100%;
+      height: 2px;
+      background-color: #020000;
+      margin: 0.01rem 0;
+    }
+    #feat {
+      color: #020000;
+      font-family: Droid Sans;
+      font-weight: bold;
+      text-align: left;
+      font-size: 16pt;
+      margin: 0.1rem 0;
+    }
+    .h1 {
+      color: #020000;
+      font-family: Droid Sans;
+      font-weight: bold;
+      text-align: left;
+      font-size: 16pt;
+      margin: 0.1rem 0;
+    }
+    #mail {
+      text-align: left;
     }
   </style>
-    <body>
-     
+</head>
+<body>
+
+<!-- Header -->
+      
+<!-- Central Banner -->
+
+<section class="banner">
+  <img class="banner" src="img\switz.jpg" alt="page art">
+</section>
+<div id="header">       
+<h1>James Fehr</a></h1>
+<h2>General IT Developer</h2>
+<h3>
+  <div class="a" id="mail">
+    <a href="mailto:fehr.james@gmail.com"><img src="img/mail.png" height="25px" width="25px"></a>
+  </div>
+</h3>
+</div>
+</section>
+</header>
+<main id="feat" style="cursor:pointer;">Featured Work
+  <div class="divider"></div>
+  <!-- Featured Sites Area (Inline) -->
+  <div id="root"></div>
   <!-- React and ReactDOM via CDN -->
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <!-- Babel for JSX -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <!-- Your React code -->
-
-      <div class="grid">
-            <!-- Header -->
-      <header class="row">
-        <div class="col-j6">
-          <h1 class="logo" align="center">jf</h1>
-        </div>
-        <div class="col-j6">
-          <h1 align="right">james fehr</h1>
-          <h2 align="right">front end designer</h4>
-        </div>
-      </header>
-      <!-- Central Banner -->
-      <div class="divider"></div>
-        <section class="col-j12"><img class="banner" src="img\switz.jpg" alt="page art"></section>
-        <main class="divider-f">Featured Work
-        <!-- Featured Sites Area (Inline) -->
-        <!-- TODO:  -Keep Updated: add projects in script.js -->
-      <script type="text/babel">
-      const projects = [
-      {
-        name: 'Portfolio',
-        url: 'https://turtle-head.github.io/PortfolioDeux/',
-        pic: 'img/Portfolio.png',
-        git: 'https://github.com/Turtle-Head/Portfolio'
-      },
-      {
-        name: 'Coding the little things',
-        url: 'http://turtle-head.github.io/Coding-the-little-things/',
-        pic: 'img/code.png',
-        git: 'https://github.com/Turtle-Head/Coding-the-little-things'
-       
-      },      {
-        name: 'Bugged',
-        url: 'http://turtle-head.github.io/Bugged/',
-        pic: 'img/Bugged.png',
-        git: 'https://github.com/Turtle-Head/Bugged'
-      },
-      {
-        name: 'Unknown Crusade Killboard',
-        url: 'http://turtle-head.github.io/Killboard/',
-        pic: 'img/UKCR.png',
-        git: 'https://github.com/Turtle-Head/Killboard'
-      },
-      {
-        name: 'Cat Clicker',
-        url: 'http://turtle-head.github.io/CatClicker/',
-        pic: 'img/CatClicker.png',
-        git: 'https://github.com/Turtle-Head/CatClicker'
-      },
-   
-      {
-        name: 'Gelp: Neighborhood Map Project',
-        url: 'http://turtle-head.github.io/Project5/',
-        pic: 'img/gelp.jpg',
-        git: 'https://github.com/Turtle-Head/Project5'
-      },
-      {
-        name: 'Feed Reader: Testing',
-        url: 'http://turtle-head.github.io/FeedReader-P6/',
-        pic: 'img/feedreader.png',
-        git: 'https://github.com/Turtle-Head/FeedReader-P6'
-      },
-      {
-        name: 'CleanUp',
-        url: 'https://turtle-head.github.io/CleanUp/index.html',
-        pic: 'img/water-1761027.jpg',
-        git: 'https://github.com/Turtle-Head/CleanUp'
-    },
-    {
-      name: 'CalculatorV2',
-      url: 'https://github.com/Turtle-Head/CalculatorV2',
-      pic: 'img/calcV2.png',
-      git: 'https://github.com/Turtle-Head/CalculatorV2'
-    },
-    {
-      name: 'CalculatorV6',
-      url: 'https://github.com/Turtle-Head/Calculator-v6',
-      pic: 'img/CalcV6.png',
-      git: 'https://github.com/Turtle-Head/Calculator-v6'
-    },
-    {
-      name: 'AirBus',
-      url:  'https://github.com/Turtle-Head/AirBub',
-      pic:  'img/AirBus.png',
-      git: 'https://github.com/Turtle-Head/AirBub'
-    },
-    {
-      name: 'Battleship',
-      url:  'https://github.com/Turtle-Head/BattleShip',
-      pic:  'img/BS3.png',
-      git:  'https://github.com/Turtle-Head/BattleShip'
-    },
-  {
-      name: 'Club',
-      url:  'https://github.com/Turtle-Head/Club',
-      pic:  'img/Club.png',
-      git:  'https://github.com/Turtle-Head/Club'
-    }
+  <script type="text/babel">
+    const projects = [
+      { name: 'Portfolio', url: 'https://turtle-head.github.io/Portfolio', pic: 'img/Portfolio.png', git: 'https://github.com/Turtle-Head/Portfolio' },
+      { name: 'Coding the little things', url: 'http://turtle-head.github.io/Coding-the-little-things/', pic: 'img/code.png', git: 'https://github.com/Turtle-Head/Coding-the-little-things' },
+      { name: 'Bugged', url: 'http://turtle-head.github.io/Bugged/', pic: 'img/Bugged.png', git: 'https://github.com/Turtle-Head/Bugged' },
+      { name: 'Unknown Crusade Killboard', url: 'http://turtle-head.github.io/Killboard/', pic: 'img/UKCR.png', git: 'https://github.com/Turtle-Head/Killboard' },
+      { name: 'Cat Clicker', url: 'http://turtle-head.github.io/CatClicker/', pic: 'img/CatClicker.png', git: 'https://github.com/Turtle-Head/CatClicker' },
+      { name: 'Gelp: Neighborhood Map Project', url: 'http://turtle-head.github.io/Project5/', pic: 'img/gelp.jpg', git: 'https://github.com/Turtle-Head/Project5' },
+      { name: 'Feed Reader: Testing', url: 'http://turtle-head.github.io/FeedReader-P6/', pic: 'img/feedreader.png', git: 'https://github.com/Turtle-Head/FeedReader-P6' },
+      { name: 'CleanUp', url: 'https://turtle-head.github.io/CleanUp/index.html', pic: 'img/water-1761027.jpg', git: 'https://github.com/Turtle-Head/CleanUp' },
+      { name: 'CalculatorV2', url: 'https://github.com/Turtle-Head/CalculatorV2', pic: 'img/calcV2.png', git: 'https://github.com/Turtle-Head/CalculatorV2' },
+      { name: 'CalculatorV6', url: 'https://github.com/Turtle-Head/Calculator-v6', pic: 'img/CalcV6.png', git: 'https://github.com/Turtle-Head/Calculator-v6' },
+      { name: 'AirBus', url:  'https://github.com/Turtle-Head/AirBub', pic:  'img/AirBus.png', git: 'https://github.com/Turtle-Head/AirBub' },
+      { name: 'Battleship', url:  'https://github.com/Turtle-Head/BattleShip', pic:  'img/BS3.png', git:  'https://github.com/Turtle-Head/BattleShip' },
+      { name: 'Club', url:  'https://github.com/Turtle-Head/Club', pic:  'img/Club.png', git:  'https://github.com/Turtle-Head/Club' }
     ];
 
     function ProjectCard({ project }) {
@@ -167,21 +160,27 @@
       );
     }
 
-    function ProjectGrid() {
-      return (
+    function ToggleProjectGrid() {
+      const [visible, setVisible] = React.useState(false);
+
+      React.useEffect(() => {
+        const feat = document.getElementById('feat');
+        const handleClick = () => setVisible(v => !v);
+        feat.addEventListener('click', handleClick);
+        return () => feat.removeEventListener('click', handleClick);
+      }, []);
+
+      return visible ? (
         <div className="project-grid">
           {projects.map((project, idx) => (
             <ProjectCard key={idx} project={project} />
           ))}
         </div>
-      );
+      ) : null;
     }
 
-    ReactDOM.createRoot(document.getElementById('root')).render(<ProjectGrid />);
+    ReactDOM.createRoot(document.getElementById('root')).render(<ToggleProjectGrid />);
   </script>
-    
-        </main>
-        <script src="js/script.min.js"></script>
-      </div>
-    </body>
+</main>
+</body>
 </html>
