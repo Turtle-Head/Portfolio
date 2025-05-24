@@ -7,6 +7,6 @@ and organic entity.
 
 Initially this project was designed and used prmarily with Knockout.js. I have taken this work and refactored it into a React.js native way to provide 
 a demonstration of my ability to create sites using React.js as the main javascript library in use.<br><br>
-
--Replaced Knockout.js with React.js 
--refactored to make several esthetic changes
+<br>
+-Replaced Knockout.js with React.js <br>
+-refactored to make several esthetic changes<br>
