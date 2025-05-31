@@ -1,13 +1,21 @@
-# Projects
-**Portfolio of work**
-The project is to show my coding work in a grid-based pattern. This includes links to the code produced and links to the content in the case of websites.
+# Portfolio
 
-It has been *updated* with my work to show off what I have done and provide easy access to projects as an ongoing 
+**Portfolio of work**
+The project is to mock up a portfolio in a grid based pattern.
+
+It has been *updated* with my own work to show off what I have done and provide easy access to projects as an ongoing
 and organic entity.
 
-Initially this project was designed and used prmarily with Knockout.js. I have taken this work and refactored it into a React.js native way to provide 
-a demonstration of my ability to create sites using React.js as the main javascript library in use.<br><br>
-<br>
--Replaced Knockout.js with React.js <br>
--refactored to make several esthetic changes<br>
--added show/hide function to the Featured Work button
+## **Sept 19/15**
+
+- Updated links to my own work after publishing the repositories on Github
+- Added a picture of the Bugged game for Project 3
+
+### May 31, 2025
+
+- Converted Portfolio from Knockout.JS to React.JS
+- Updated Education from Front-End Web Developer to General IT Developer
+- Added hamburger menu with projects and contact options
+- projects are setup using a toggle system, show/hide
+- planned update is to sort the projects into languages used { eg: Python, HTML, Javascript, C#, VBasic }
+- planned update is to include an About Me section describing certifications/diplomas
