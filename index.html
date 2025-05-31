@@ -5,17 +5,16 @@
   <meta name="description" content="Website Design, British Columbia, Vancouver, HTML5 code, JavaScript, CSS, James Fehr, Portfolio, HTML5, React, JavaScript, CSS, Front End Design, General IT Developer, Web Development, Web, HTML, JS">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>James Fehr</title>
-  <link rel="icon" type="image/png" href=".\img\j.png" />
+  <link rel="icon" type="image/png" href="img/j.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Add your CSS here -->
   <link href="http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8b+z4x2e5c5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8b+z4x2e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css" crossorigin="anonymous" />
   <style>
     .banner {
       width: 100%;
       height: auto; 
-     }
+    }
     .grid {
       display: flex;
       flex-direction: column;
@@ -98,89 +97,166 @@
     #mail {
       text-align: left;
     }
+    /* Hamburger menu styles */
+    .hamburger {
+      display: inline-block;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .hamburger-bar {
+      width: 30px;
+      height: 4px;
+      background-color: #333;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: 0.4s;
+    }
+    .menu-dropdown {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      margin-top: 10px;
+      border-radius: 8px;
+      padding: 0.5rem 0;
+    }
+    .menu-dropdown.show {
+      display: block;
+    }
+    .menu-dropdown a {
+      color: #333;
+      padding: 12px 24px;
+      text-decoration: none;
+      display: block;
+      font-size: 1rem;
+      font-family: inherit;
+      border: none;
+      background: none;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .menu-dropdown a:hover {
+      background-color: #f1f1f1;
+    }
+    @media (max-width: 600px) {
+      .project-card { width: 95vw; }
+      .menu-dropdown { min-width: 95vw; }
+    }
   </style>
 </head>
 <body>
 
-<!-- Header -->
-      
 <!-- Central Banner -->
-
 <section class="banner">
-  <img class="banner" src="img\switz.jpg" alt="page art">
+  <img class="banner" src="img/switz.jpg" alt="page art">
 </section>
 <div id="header">       
-<h1>James Fehr</a></h1>
-<h2>General IT Developer</h2>
-<h3>
-  <div class="a" id="mail">
-    <a href="mailto:fehr.james@gmail.com"><img src="img/mail.png" height="25px" width="25px"></a>
-  </div>
-</h3>
+  <h1>James Fehr</h1>
+  <h2>General IT Developer</h2>
+  <!-- Hamburger menu will be rendered here by React -->
+  <div id="menu-root"></div>
 </div>
-</section>
-</header>
-<m id="feat" style="cursor:pointer;">Projects</m>
-  <div class="divider"></div>
-  <!-- Featured Sites Area (Inline) -->
-  <div id="root"></div>
-  <!-- React and ReactDOM via CDN -->
-  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <!-- Babel for JSX -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <!-- Your React code -->
-  <script type="text/babel">
-    const projects = [
-      { name: 'Portfolio', url: 'https://turtle-head.github.io/Portfolio', pic: 'img/Portfolio.png', git: 'https://github.com/Turtle-Head/Portfolio' },
-      { name: 'Coding the little things', url: 'http://turtle-head.github.io/Coding-the-little-things/', pic: 'img/code.png', git: 'https://github.com/Turtle-Head/Coding-the-little-things' },
-      { name: 'Bugged', url: 'http://turtle-head.github.io/Bugged/', pic: 'img/Bugged.png', git: 'https://github.com/Turtle-Head/Bugged' },
-      { name: 'Unknown Crusade Killboard', url: 'http://turtle-head.github.io/Killboard/', pic: 'img/UKCR.png', git: 'https://github.com/Turtle-Head/Killboard' },
-      { name: 'Cat Clicker', url: 'http://turtle-head.github.io/CatClicker/', pic: 'img/CatClicker.png', git: 'https://github.com/Turtle-Head/CatClicker' },
-      { name: 'Gelp: Neighborhood Map Project', url: 'http://turtle-head.github.io/Project5/', pic: 'img/gelp.jpg', git: 'https://github.com/Turtle-Head/Project5' },
-      { name: 'Feed Reader: Testing', url: 'http://turtle-head.github.io/FeedReader-P6/', pic: 'img/feedreader.png', git: 'https://github.com/Turtle-Head/FeedReader-P6' },
-      { name: 'CleanUp', url: 'https://turtle-head.github.io/CleanUp/index.html', pic: 'img/water-1761027.jpg', git: 'https://github.com/Turtle-Head/CleanUp' },
-      { name: 'CalculatorV2', url: 'https://github.com/Turtle-Head/CalculatorV2', pic: 'img/calcV2.png', git: 'https://github.com/Turtle-Head/CalculatorV2' },
-      { name: 'CalculatorV6', url: 'https://github.com/Turtle-Head/Calculator-v6', pic: 'img/CalcV6.png', git: 'https://github.com/Turtle-Head/Calculator-v6' },
-      { name: 'AirBus', url:  'https://github.com/Turtle-Head/AirBub', pic:  'img/AirBus.png', git: 'https://github.com/Turtle-Head/AirBub' },
-      { name: 'Battleship', url:  'https://github.com/Turtle-Head/BattleShip', pic:  'img/BS3.png', git:  'https://github.com/Turtle-Head/BattleShip' },
-      { name: 'Club', url:  'https://github.com/Turtle-Head/Club', pic:  'img/Club.png', git:  'https://github.com/Turtle-Head/Club' }
-    ];
+<div class="divider"></div>
+<!-- Featured Sites Area (Inline) -->
+<div id="root"></div>
+<!-- React and ReactDOM via CDN -->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<!-- Babel for JSX -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your React code -->
+<script type="text/babel">
+  // Projects grid (unchanged)
+  const projects = [
+    { name: 'Portfolio', url: 'https://turtle-head.github.io/Portfolio', pic: 'img/Portfolio.png', git: 'https://github.com/Turtle-Head/Portfolio' },
+    { name: 'Coding the little things', url: 'http://turtle-head.github.io/Coding-the-little-things/', pic: 'img/code.png', git: 'https://github.com/Turtle-Head/Coding-the-little-things' },
+    { name: 'Bugged', url: 'http://turtle-head.github.io/Bugged/', pic: 'img/Bugged.png', git: 'https://github.com/Turtle-Head/Bugged' },
+    { name: 'Unknown Crusade Killboard', url: 'http://turtle-head.github.io/Killboard/', pic: 'img/UKCR.png', git: 'https://github.com/Turtle-Head/Killboard' },
+    { name: 'Cat Clicker', url: 'http://turtle-head.github.io/CatClicker/', pic: 'img/CatClicker.png', git: 'https://github.com/Turtle-Head/CatClicker' },
+    { name: 'Gelp: Neighborhood Map Project', url: 'http://turtle-head.github.io/Project5/', pic: 'img/gelp.jpg', git: 'https://github.com/Turtle-Head/Project5' },
+    { name: 'Feed Reader: Testing', url: 'http://turtle-head.github.io/FeedReader-P6/', pic: 'img/feedreader.png', git: 'https://github.com/Turtle-Head/FeedReader-P6' },
+    { name: 'CleanUp', url: 'https://turtle-head.github.io/CleanUp/index.html', pic: 'img/water-1761027.jpg', git: 'https://github.com/Turtle-Head/CleanUp' },
+    { name: 'CalculatorV2', url: 'https://github.com/Turtle-Head/CalculatorV2', pic: 'img/calcV2.png', git: 'https://github.com/Turtle-Head/CalculatorV2' },
+    { name: 'CalculatorV6', url: 'https://github.com/Turtle-Head/Calculator-v6', pic: 'img/CalcV6.png', git: 'https://github.com/Turtle-Head/Calculator-v6' },
+    { name: 'AirBus', url:  'https://github.com/Turtle-Head/AirBub', pic:  'img/AirBus.png', git: 'https://github.com/Turtle-Head/AirBub' },
+    { name: 'Battleship', url:  'https://github.com/Turtle-Head/BattleShip', pic:  'img/BS3.png', git:  'https://github.com/Turtle-Head/BattleShip' },
+    { name: 'Club', url:  'https://github.com/Turtle-Head/Club', pic:  'img/Club.png', git:  'https://github.com/Turtle-Head/Club' }
+  ];
 
-    function ProjectCard({ project }) {
-      return (
-        <div className="project-card">
-          <img src={project.pic} alt={project.name} />
-          <h3>{project.name}</h3>
-          <div className="project-links">
-            <a href={project.url} target="_blank" rel="noopener noreferrer">Live</a>
-            <a href={project.git} target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
+  function ProjectCard({ project }) {
+    return (
+      <div className="project-card">
+        <img src={project.pic} alt={project.name} />
+        <h3>{project.name}</h3>
+        <div className="project-links">
+          <a href={project.url} target="_blank" rel="noopener noreferrer">Live</a>
+          <a href={project.git} target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
-      );
-    }
+      </div>
+    );
+  }
 
-    function ToggleProjectGrid() {
-      const [visible, setVisible] = React.useState(false);
+  function ProjectsGrid({ visible }) {
+    if (!visible) return null;
+    return (
+      <div className="project-grid">
+        {projects.map((project, idx) => (
+          <ProjectCard key={idx} project={project} />
+        ))}
+      </div>
+    );
+  }
 
-      React.useEffect(() => {
-        const feat = document.getElementById('feat');
-        const handleClick = () => setVisible(v => !v);
-        feat.addEventListener('click', handleClick);
-        return () => feat.removeEventListener('click', handleClick);
-      }, []);
+  function HamburgerMenu({ onProjectsToggle, projectsVisible }) {
+    const [open, setOpen] = React.useState(false);
 
-      return visible ? (
-        <div className="project-grid">
-          {projects.map((project, idx) => (
-            <ProjectCard key={idx} project={project} />
-          ))}
+    // Close menu on outside click
+    React.useEffect(() => {
+      function handleClick(e) {
+        if (!e.target.closest('.hamburger') && !e.target.closest('.menu-dropdown')) {
+          setOpen(false);
+        }
+      }
+      if (open) document.addEventListener('mousedown', handleClick);
+      return () => document.removeEventListener('mousedown', handleClick);
+    }, [open]);
+
+    return (
+      <div style={{ position: 'relative', display: 'inline-block' }}>
+        <div className="hamburger" onClick={() => setOpen(o => !o)} aria-label="Open menu" tabIndex={0}>
+          <div className="hamburger-bar"></div>
+          <div className="hamburger-bar"></div>
         </div>
-      ) : null;
-    }
+        <div className={`menu-dropdown${open ? ' show' : ''}`}>
+          <a href="mailto:fehr.james@gmail.com">Contact Me</a>
+          <a href="#projects" onClick={e => { e.preventDefault(); onProjectsToggle(); setOpen(false); }}>
+            {projectsVisible ? "Hide Projects" : "Show Projects"}
+          </a>
+        </div>
+      </div>
+    );
+  }
 
-    ReactDOM.createRoot(document.getElementById('root')).render(<ToggleProjectGrid />);
-  </script>
-</main>
+  function App() {
+    const [projectsVisible, setProjectsVisible] = React.useState(false);
+
+    return (
+      <>
+        <HamburgerMenu
+          onProjectsToggle={() => setProjectsVisible(v => !v)}
+          projectsVisible={projectsVisible}
+        />
+        <ProjectsGrid visible={projectsVisible} />
+      </>
+    );
+  }
+
+  // Render hamburger menu and project grid via App
+  ReactDOM.createRoot(document.getElementById('menu-root')).render(<App />);
+</script>
 </body>
 </html>
