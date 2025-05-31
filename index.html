@@ -142,9 +142,24 @@
     .menu-dropdown a:hover {
       background-color: #f1f1f1;
     }
+    .about-section {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      max-width: 400px;
+      font-size: 1.1rem;
+      box-shadow: 2px 2px 8px #eee;
+    }
+    .about-section ul {
+      margin: 0;
+      padding-left: 1.2em;
+    }
     @media (max-width: 600px) {
       .project-card { width: 95vw; }
       .menu-dropdown { min-width: 95vw; }
+      .about-section { max-width: 95vw; }
     }
   </style>
 </head>
@@ -211,7 +226,23 @@
     );
   }
 
-  function HamburgerMenu({ onProjectsToggle, projectsVisible }) {
+  function AboutSection({ visible }) {
+    if (!visible) return null;
+    return (
+      <div className="about-section">
+        <ul>
+          <li>Udacity</li>
+          <ul>Front End Web Developer</ul>
+          <ul>Front End Nanodegree</ul>
+          <li>ITD Canada</li>
+          <ul>General IT Developer</ul>
+          <ul>Diploma in Computer Information Systems</ul>
+        </ul>
+      </div>
+    );
+  }
+
+  function HamburgerMenu({ onProjectsToggle, projectsVisible, onAboutToggle, aboutVisible }) {
     const [open, setOpen] = React.useState(false);
 
     // Close menu on outside click
@@ -231,8 +262,11 @@
           <div className="hamburger-bar"></div>
           <div className="hamburger-bar"></div>
         </div>
-        <div className={`menu-dropdown${open ? ' show' : ''}`}>
+        <div className={`menu-dropdown${open ? ' show' : ' hide'}`}>
           <a href="mailto:fehr.james@gmail.com">Contact Me</a>
+          <a href="#about" onClick={e => { e.preventDefault(); onAboutToggle(); setOpen(false); }}>
+            {aboutVisible ? "About" : "About"}
+          </a>
           <a href="#projects" onClick={e => { e.preventDefault(); onProjectsToggle(); setOpen(false); }}>
             {projectsVisible ? "Projects" : "Projects"}
           </a>
@@ -243,19 +277,23 @@
 
   function App() {
     const [projectsVisible, setProjectsVisible] = React.useState(false);
+    const [aboutVisible, setAboutVisible] = React.useState(false);
 
     return (
       <>
         <HamburgerMenu
           onProjectsToggle={() => setProjectsVisible(v => !v)}
           projectsVisible={projectsVisible}
+          onAboutToggle={() => setAboutVisible(v => !v)}
+          aboutVisible={aboutVisible}
         />
+        <AboutSection visible={aboutVisible} />
         <ProjectsGrid visible={projectsVisible} />
       </>
     );
   }
 
-  // Render hamburger menu and project grid via App
+  // Render hamburger menu, about, and project grid via App
   ReactDOM.createRoot(document.getElementById('menu-root')).render(<App />);
 </script>
 </body>

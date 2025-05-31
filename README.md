@@ -17,5 +17,7 @@ and organic entity.
 - Updated Education from Front-End Web Developer to General IT Developer
 - Added hamburger menu with projects and contact options
 - projects are setup using a toggle system, show/hide
+
+- update added About section describing certifications/diplomas
+
 - planned update is to sort the projects into languages used { eg: Python, HTML, Javascript, C#, VBasic }
-- planned update is to include an About Me section describing certifications/diplomas
