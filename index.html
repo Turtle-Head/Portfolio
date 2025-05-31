@@ -1,65 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="author" content="James Fehr">
-        <meta name="description" content="Website Design, British Columbia, Vancouver, HTML5 code, JavaScript, CSS, James Fehr, Portfolio, HTML5, JavaScript, CSS, Front End Design, Front End Web Developer, Web Development, Web, HTML, JS">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css">
-        <link href="CSS/main.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="CSS/style.min.css">
-        <link href="http://fonts.googleapis.com/css?family=Fira+Sans:400,700" rel="stylesheet" type="text/css">
-        <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-73697725-1', 'auto');
-        ga('send', 'pageview');
-        </script>
-        <title>James Fehr</title>
-        <link rel="icon" type="image/png" href="j.png"/>
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Website Design, British Columbia, Vancouver, HTML5 code, JavaScript, CSS, James Fehr, Portfolio, HTML5, React, JavaScript, CSS, Front End Design, General IT Developer, Web Development, Web, HTML, JS">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>James Fehr</title>
+  <link rel="icon" type="image/png" href="img/j.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css" crossorigin="anonymous" />
+  <style>
+    .banner {
+      width: 100%;
+      height: auto; 
+    }
+    .grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .project-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 250px;
+      box-shadow: 2px 2px 8px #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: small;
+    }
+    .project-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .project-card h3 {
+      margin: 0.5rem 0;
+    }
+    .project-links a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: black;
+      font-size: 14px;
+    }
+    #header {
+      background: #ffffff;
+      color: black;
+      font-family: Droid Sans;
+      font-size: 15px;
+      line-height: 1.6em;
+      font-weight: bold;
+      text-align: left;
+      padding: 15px 0;
+      text-shadow: 0 1px 1px rgba(0,0,0,.2);
+      width:100%;
+      box-sizing:border-box;
+    }
+    .divider {
+      width: 100%;
+      height: 2px;
+      background-color: #020000;
+      margin: 0.01rem 0;
+    }
+    #feat {
+      color: #020000;
+      font-family: Droid Sans;
+      font-weight: bold;
+      text-align: left;
+      font-size: 14pt;
+      margin: 0.1rem 0;
+    }
+    .h1 {
+      color: #020000;
+      font-family: Droid Sans;
+      font-weight: bold;
+      text-align: left;
+      font-size: 16pt;
+      margin: 0.1rem 0;
+    }
+    #mail {
+      text-align: left;
+    }
+    /* Hamburger menu styles */
+    .hamburger {
+      display: inline-block;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .hamburger-bar {
+      width: 30px;
+      height: 4px;
+      background-color: #333;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: 0.4s;
+    }
+    .menu-dropdown {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      margin-top: 10px;
+      border-radius: 8px;
+      padding: 0.5rem 0;
+    }
+    .menu-dropdown.show {
+      display: block;
+    }
+    .menu-dropdown a {
+      color: #333;
+      padding: 12px 24px;
+      text-decoration: none;
+      display: block;
+      font-size: 1rem;
+      font-family: inherit;
+      border: none;
+      background: none;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .menu-dropdown a:hover {
+      background-color: #f1f1f1;
+    }
+    .about-section {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      max-width: 400px;
+      font-size: 1.1rem;
+      box-shadow: 2px 2px 8px #eee;
+    }
+    .about-section ul {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+    @media (max-width: 600px) {
+      .project-card { width: 95vw; }
+      .menu-dropdown { min-width: 95vw; }
+      .about-section { max-width: 95vw; }
+    }
+  </style>
+</head>
+<body>
 
-    <body>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
-      <div class="grid">
-            <!-- Header -->
-      <header class="row">
-        <div class="col-j6">
-          <h1 class="logo" align="center">jf</h1>
+<!-- Central Banner -->
+<section class="banner">
+  <img class="banner" src="img/switz.jpg" alt="page art">
+</section>
+<div id="header">       
+  <h1>James Fehr</h1>
+  <h2>General IT Developer</h2>
+  <!-- Hamburger menu will be rendered here by React -->
+  <div id="menu-root"></div>
+</div>
+<div class="divider"></div>
+<!-- Featured Sites Area (Inline) -->
+<div id="root"></div>
+<!-- React and ReactDOM via CDN -->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<!-- Babel for JSX -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your React code -->
+<script type="text/babel">
+  // Projects grid (unchanged)
+  const projects = [
+    { name: 'Portfolio', url: 'https://turtle-head.github.io/Portfolio', pic: 'img/Portfolio.png', git: 'https://github.com/Turtle-Head/Portfolio' },
+    { name: 'Coding the little things', url: 'http://turtle-head.github.io/Coding-the-little-things/', pic: 'img/code.png', git: 'https://github.com/Turtle-Head/Coding-the-little-things' },
+    { name: 'Bugged', url: 'http://turtle-head.github.io/Bugged/', pic: 'img/Bugged.png', git: 'https://github.com/Turtle-Head/Bugged' },
+    { name: 'Unknown Crusade Killboard', url: 'http://turtle-head.github.io/Killboard/', pic: 'img/UKCR.png', git: 'https://github.com/Turtle-Head/Killboard' },
+    { name: 'Cat Clicker', url: 'http://turtle-head.github.io/CatClicker/', pic: 'img/CatClicker.png', git: 'https://github.com/Turtle-Head/CatClicker' },
+    { name: 'Gelp: Neighborhood Map Project', url: 'http://turtle-head.github.io/Project5/', pic: 'img/gelp.jpg', git: 'https://github.com/Turtle-Head/Project5' },
+    { name: 'Feed Reader: Testing', url: 'http://turtle-head.github.io/FeedReader-P6/', pic: 'img/feedreader.png', git: 'https://github.com/Turtle-Head/FeedReader-P6' },
+    { name: 'CleanUp', url: 'https://turtle-head.github.io/CleanUp/index.html', pic: 'img/water-1761027.jpg', git: 'https://github.com/Turtle-Head/CleanUp' },
+    { name: 'CalculatorV2', url: 'https://github.com/Turtle-Head/CalculatorV2', pic: 'img/calcV2.png', git: 'https://github.com/Turtle-Head/CalculatorV2' },
+    { name: 'CalculatorV6', url: 'https://github.com/Turtle-Head/Calculator-v6', pic: 'img/CalcV6.png', git: 'https://github.com/Turtle-Head/Calculator-v6' },
+    { name: 'AirBus', url:  'https://github.com/Turtle-Head/AirBub', pic:  'img/AirBus.png', git: 'https://github.com/Turtle-Head/AirBub' },
+    { name: 'Battleship', url:  'https://github.com/Turtle-Head/BattleShip', pic:  'img/BS3.png', git:  'https://github.com/Turtle-Head/BattleShip' },
+    { name: 'Club', url:  'https://github.com/Turtle-Head/Club', pic:  'img/Club.png', git:  'https://github.com/Turtle-Head/Club' }
+  ];
+
+  function ProjectCard({ project }) {
+    return (
+      <div className="project-card">
+        <img src={project.pic} alt={project.name} />
+        <h3>{project.name}</h3>
+        <div className="project-links">
+          <a href={project.url} target="_blank" rel="noopener noreferrer">Live</a>
+          <a href={project.git} target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
-        <div class="col-j6">
-          <h1 align="right">james fehr</h1>
-          <h2 align="right">general IT prpgrammer</h4>
-        </div>
-      </header>
-      <!-- Central Banner -->
-      <div class="divider"></div>
-        <section class="col-j12"><div class="banner"></div></section>
-        <main class="divider-f">Featured Work
-        <!-- Featured Sites Area (Inline) -->
-        <!-- TODO:  -Keep Updated: add projects in script.js -->
-          <section class="row" align="center" data-bind="foreach: projects">
-            <article class="col-j4">
-              <div class="col-j12" id="feat-item">
-                <a href="" data-bind="attr: {'href': url}" target="_blank">
-                  <img data-bind="attr: {'src': pic}">
-                </a>
-              </div>
-              <div class="col-j12">
-                <a data-bind="attr: {'href': url}" target="_blank">
-                  <h3 data-bind="text: name"></h3>
-                </a>
-                <a data-bind="attr: {'href': git}" target="_blank">
-                  <img src="img/GitHub-Mark-32px.png" width="32px" height="32px" alt="GitHub">
-                </a>
-              </div>
-            </article>
-          </section>
-        </main>
-        <script src="js/script.min.js"></script>
       </div>
-    </body>
+    );
+  }
+
+  function ProjectsGrid({ visible }) {
+    if (!visible) return null;
+    return (
+      <div className="project-grid">
+        {projects.map((project, idx) => (
+          <ProjectCard key={idx} project={project} />
+        ))}
+      </div>
+    );
+  }
+
+  function AboutSection({ visible }) {
+    if (!visible) return null;
+    return (
+      <div className="about-section">
+        <ul>
+          <li>Udacity</li>
+          <ul>Front End Web Developer</ul>
+          <ul>Front End Nanodegree</ul>
+          <li>ITD Canada</li>
+          <ul>General IT Developer</ul>
+          <ul>Diploma in Computer Information Systems</ul>
+        </ul>
+      </div>
+    );
+  }
+
+  function HamburgerMenu({ onProjectsToggle, projectsVisible, onAboutToggle, aboutVisible }) {
+    const [open, setOpen] = React.useState(false);
+
+    // Close menu on outside click
+    React.useEffect(() => {
+      function handleClick(e) {
+        if (!e.target.closest('.hamburger') && !e.target.closest('.menu-dropdown')) {
+          setOpen(false);
+        }
+      }
+      if (open) document.addEventListener('mousedown', handleClick);
+      return () => document.removeEventListener('mousedown', handleClick);
+    }, [open]);
+
+    return (
+      <div style={{ position: 'relative', display: 'inline-block' }}>
+        <div className="hamburger" onClick={() => setOpen(o => !o)} aria-label="Open menu" tabIndex={0}>
+          <div className="hamburger-bar"></div>
+          <div className="hamburger-bar"></div>
+        </div>
+        <div className={`menu-dropdown${open ? ' show' : ' hide'}`}>
+          <a href="mailto:fehr.james@gmail.com">Contact Me</a>
+          <a href="#about" onClick={e => { e.preventDefault(); onAboutToggle(); setOpen(false); }}>
+            {aboutVisible ? "About" : "About"}
+          </a>
+          <a href="#projects" onClick={e => { e.preventDefault(); onProjectsToggle(); setOpen(false); }}>
+            {projectsVisible ? "Projects" : "Projects"}
+          </a>
+        </div>
+      </div>
+    );
+  }
+
+  function App() {
+    const [projectsVisible, setProjectsVisible] = React.useState(false);
+    const [aboutVisible, setAboutVisible] = React.useState(false);
+
+    return (
+      <>
+        <HamburgerMenu
+          onProjectsToggle={() => setProjectsVisible(v => !v)}
+          projectsVisible={projectsVisible}
+          onAboutToggle={() => setAboutVisible(v => !v)}
+          aboutVisible={aboutVisible}
+        />
+        <AboutSection visible={aboutVisible} />
+        <ProjectsGrid visible={projectsVisible} />
+      </>
+    );
+  }
+
+  // Render hamburger menu, about, and project grid via App
+  ReactDOM.createRoot(document.getElementById('menu-root')).render(<App />);
+</script>
+</body>
 </html>
