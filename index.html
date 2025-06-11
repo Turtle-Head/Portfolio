@@ -199,7 +199,8 @@
     { name: 'CalculatorV6', url: 'https://github.com/Turtle-Head/Calculator-v6', pic: 'img/CalcV6.png', git: 'https://github.com/Turtle-Head/Calculator-v6' },
     { name: 'AirBus', url:  'https://github.com/Turtle-Head/AirBub', pic:  'img/AirBus.png', git: 'https://github.com/Turtle-Head/AirBub' },
     { name: 'Battleship', url:  'https://github.com/Turtle-Head/BattleShip', pic:  'img/BS3.png', git:  'https://github.com/Turtle-Head/BattleShip' },
-    { name: 'Club', url:  'https://github.com/Turtle-Head/Club', pic:  'img/Club.png', git:  'https://github.com/Turtle-Head/Club' }
+    { name: 'Club', url:  'https://github.com/Turtle-Head/Club', pic:  'img/Club.png', git:  'https://github.com/Turtle-Head/Club' },
+    { name: 'Note App', url:  'https://turtle-head.github.io/NoteApp/', pic:  'img/NoteApp.png', git:  'Turtle-Head/NoteApp' }    
   ];
 
   function ProjectCard({ project }) {
@@ -229,20 +230,24 @@
   function AboutSection({ visible }) {
     if (!visible) return null;
     return (
-<<<<<<< HEAD
-      <div className="about-section">
-=======
-      <div classN ame="about-section">
->>>>>>> 52bb205 (Updates)
-        <ul>
-          <li>Udacity</li>
-          <ul>Front End Web Developer</ul>
-          <ul>Front End Nanodegree</ul>
-          <li>ITD Canada</li>
-          <ul>General IT Developer</ul>
-          <ul>Diploma in Computer Information Systems</ul>
-        </ul>
-      </div>
+<div className="about-section">
+  <ul>
+    <li>
+      Udacity
+      <ul>
+        <li>Front End Web Developer</li>
+        <li>Front End Nanodegree</li>
+      </ul>
+    </li>
+    <li>
+      ITD Canada
+      <ul>
+        <li>General IT Developer</li>
+        <li>Diploma in Computer Information Systems</li>
+      </ul>
+    </li>
+  </ul>
+</div>
     );
   }
 
@@ -279,26 +284,49 @@
     );
   }
 
-  function App() {
-    const [projectsVisible, setProjectsVisible] = React.useState(false);
-    const [aboutVisible, setAboutVisible] = React.useState(false);
+  function HamburgerMenuApp({ projectsVisible, aboutVisible, onProjectsToggle, onAboutToggle }) {
+    return (
+      <HamburgerMenu
+        onProjectsToggle={onProjectsToggle}
+        projectsVisible={projectsVisible}
+        onAboutToggle={onAboutToggle}
+        aboutVisible={aboutVisible}
+      />
+    );
+  }
 
+  function MainContentApp({ projectsVisible, aboutVisible }) {
     return (
       <>
-        <HamburgerMenu
-          onProjectsToggle={() => setProjectsVisible(v => !v)}
-          projectsVisible={projectsVisible}
-          onAboutToggle={() => setAboutVisible(v => !v)}
-          aboutVisible={aboutVisible}
-        />
         <AboutSection visible={aboutVisible} />
         <ProjectsGrid visible={projectsVisible} />
       </>
     );
   }
 
-  // Render hamburger menu, about, and project grid via App
-  ReactDOM.createRoot(document.getElementById('menu-root')).render(<App />);
+  function RootApp() {
+    const [projectsVisible, setProjectsVisible] = React.useState(false);
+    const [aboutVisible, setAboutVisible] = React.useState(false);
+
+    // Render hamburger menu in menu-root
+    React.useEffect(() => {
+      ReactDOM.createRoot(document.getElementById('menu-root')).render(
+        <HamburgerMenuApp
+          projectsVisible={projectsVisible}
+          aboutVisible={aboutVisible}
+          onProjectsToggle={() => setProjectsVisible(v => !v)}
+          onAboutToggle={() => setAboutVisible(v => !v)}
+        />
+      );
+    }, [projectsVisible, aboutVisible]);
+
+    return (
+      <MainContentApp projectsVisible={projectsVisible} aboutVisible={aboutVisible} />
+    );
+  }
+
+  // Render main content (About, Projects) in root
+  ReactDOM.createRoot(document.getElementById('root')).render(<RootApp />);
 </script>
 </body>
 </html>
