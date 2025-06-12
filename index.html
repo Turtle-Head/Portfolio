@@ -233,6 +233,30 @@
     if (!visible) return null;
     return (
 <div className="about-section">
+  <h2>About Me</h2>
+  <p>
+    I am a General IT Developer with a passion for web development and design. 
+    </p>
+  <h3>Tools</h3>
+  <ul>
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>Responsive Design</li>
+    <li>Version Control (Git)</li>
+    <li>Python</li>
+    <li>MySQL</li>
+    <li>C#</li>
+    <li>VB</li>
+    <li>SQL</li>
+    <li>Node.js</li>
+   </ul>
+  <h3>Education</h3>
+  <p>
+    I have completed several courses and certifications to enhance my skills in web development and IT. Here are some of the key programs I've undertaken:
+  </p>
+  <h4>Certifications</h4>
   <ul>
     <li>
       Udacity
@@ -273,7 +297,7 @@
           <div className="hamburger-bar"></div>
           <div className="hamburger-bar"></div>
         </div>
-        <div className={`menu-dropdown${open ? ' show' : ' hide'}`}>
+        <div className={`menu-dropdown${open ? ' show' : ''}`}>
           <a href="mailto:fehr.james@gmail.com">Contact Me</a>
           <a href="#about" onClick={e => { e.preventDefault(); onAboutToggle(); setOpen(false); }}>
             {aboutVisible ? "About" : "About"}
