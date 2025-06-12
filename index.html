@@ -166,19 +166,39 @@
 </head>
 <body>
 
-<!-- Central Banner -->
-<section class="banner">
-  <img class="banner" src="img/switz.jpg" alt="page art">
-</section>
-<div id="header">       
-  <h1>James Fehr</h1>
-  <h2>General IT Developer</h2>
-  <!-- Hamburger menu will be rendered here by React -->
-  <div id="menu-root"></div>
+<div id="banner-menu-root"></div>
+<script type="text/babel">
+  function BannerMenu() {
+    return (
+      <section className="banner" style={{ textAlign: 'center', marginBottom: '1rem' }}>
+        <img className="banner" src="img/switz.jpg" alt="page art" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+        <div id="header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', background: 'none', boxShadow: 'none', padding: '1rem 0 0 0' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#333', padding: '15px', fontFamily: 'Droid Sans' }}>James Fehr</span>
+            <a href="https://github.com/Turtle-Head/" target="_blank" rel="noopener noreferrer">
+              <img src="img/gh.png" alt="GitHub Repository" style={{ height: '32px', width: 'auto', verticalAlign: 'middle' }} />
+            </a>
+          </div>
+          <div style={{ marginLeft: '1rem' }}>
+            <div id="menu-root"></div>
+          </div>
+        </div>
+        <div style={{ fontFamily: 'Droid Sans', fontWeight: 'bold', fontSize: '1.1rem', color: '#020000', marginTop: '0.5rem', textAlign: 'center' }}>
+          General IT Developer
+        </div>
+      </section>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('banner-menu-root')).render(<BannerMenu />);
+</script>
+  
 </div>
 <div class="divider"></div>
 <!-- Featured Sites Area (Inline) -->
-<div id="root"></div>
+<div style="display: flex; align-items: center; gap: 1rem;">
+  
+  <div id="root"></div>
+</div>
 <!-- React and ReactDOM via CDN -->
 <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
@@ -236,7 +256,8 @@
   <h2>About Me</h2>
   <p>
     I am a General IT Developer with a passion for web development and design. 
-    </p>
+  </p>
+  
   <h3>Tools</h3>
   <ul>
     <li>HTML5</li>
@@ -259,17 +280,15 @@
   <h4>Certifications</h4>
   <ul>
     <li>
-      Udacity
+      Udacity - Front End Nanodegree - June 2016
       <ul>
-        <li>Front End Web Developer</li>
-        <li>Front End Nanodegree</li>
+        <li> Front End Web Developer</li>
       </ul>
     </li>
     <li>
-      ITD Canada
+      ITD Canada - Diploma in Computer Information Systems - September 2024
       <ul>
-        <li>General IT Developer</li>
-        <li>Diploma in Computer Information Systems</li>
+        <li> General IT Developer</li>
       </ul>
     </li>
   </ul>
